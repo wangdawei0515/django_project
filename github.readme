@@ -1,0 +1,13 @@
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/wangdawei0515/django_project.git
+git push -u origin master
+
+
+
+创建Tag直接加入名字就好了，格式：git tag 名字 -m 注释
+例如：git tag v0.0.2 -m "XXX"   注释可以不加
+
+将本地Tag推送到远程Tag上，格式：git push origin tag名（上面自己取得名字）
+例如：git push origin XXX
