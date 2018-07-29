@@ -8,15 +8,16 @@ $(function () {
         width: '100%',
         height: '100%',
         file: video_url,
-        image: "http://hemvpc6ui1kef2g0dd2.exp.bcevod.com/mda-igjsr8g7z7zqwnav/mda-igjsr8g7z7zqwnav.jpg",
+        //视频未播放前的图片
+        image: "http://ignd50m89sed0nvg46w.exp.bcevod.com/mda-igptau82rve1w5bj/mda-igptau82rve1w5bj.jpg",
         autostart: false,
         stretching: "uniform",
         repeat: false,
         volume: 100,
         controls: true,
         tokenEncrypt: "true",
-        // AccessKey
-        ak: '42455a8c985649aeaa4ca86b50482d78'
+        // 百度云控制台->右上角头像点击->安全认证AccessKey
+        ak: 'a0192dea9a674fbeb999256e4a494613'
     });
     player.on("beforePlay",function (e) {
         if(!/m3u8/.test(e.file)){

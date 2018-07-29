@@ -179,3 +179,6 @@ BAIDU_CLOUD_USER_ID = '69e7e0e76cd549558e75889cf2742d7f'
 # 点播VOD->全局设置->发布设置->安全设置->UserKey
 # BAIDU_CLOUD_USER_KEY = 'c228d166497b400d'
 BAIDU_CLOUD_USER_KEY = 'b4f4d8ee427a4716'
+
+#当用户没登陆时会跳转到登陆页面
+LOGIN_URL = '/account/login/'

@@ -7,6 +7,7 @@ from hashlib import md5
 from django.shortcuts import reverse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required  #判断用户是否登陆的装饰器，如果没登陆的话在seeting文件中设置LOGIN_URL去指定登陆路径
 
 def course_index(request):
     context = {
@@ -14,6 +15,7 @@ def course_index(request):
     }
     return render(request,'course/course_index.html',context=context)
 
+@login_required
 def course_detail(request,course_id):
     course = Course.objects.get(pk=course_id)
     context = {

@@ -7,6 +7,7 @@ from hashlib import md5
 from django.http import FileResponse
 from django.conf import settings
 import os
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     payinfos = Payinfo.objects.all()
@@ -15,7 +16,7 @@ def index(request):
     }
     return render(request,'payinfo/payinfo.html',context=context)
 
-
+@login_required
 def payinfo_order(request):
     payinfo_id = request.GET.get('payinfo_id')
     payinfo = Payinfo.objects.get(pk=payinfo_id)
